@@ -7,7 +7,7 @@ var $losses = document.getElementById("losses");
 var $audio = document.getElementById("audio");
 
 var cities = ["Atlanta","Boston","Brooklyn","Charlotte","Chicago","Cleveland","Dallas","Denver","Detroit","Golden State","Houston","Indiana","Los Angeles","Memphis","Miami","Milwaukee","Minnesota","New Orleans","New York","Oklahoma City","Orlando","Philadelphia","Phoenix","Portland","Sacramento","San Antonio","Toronto","Utah","Washington"];
-var images = ["hawks.png","celtics.jpg","nets.png","hornets.png","bulls.jpg","cavs.png","mavs.png","denver.jpg","pistons.gif","gs.jpeg","rockets.jpg","pacers.jpg","lakers.png","grizz.png","heat.jpeg","bucks.png","timber.jpg","pelicans.png","ny.png","okc.jpg","magic.png","76.png","phx.jpeg","port.jpg","sac.png","sa.jpg","rap.jpg","jazz.jpg","dc.png"]
+var images = ["hawks.png","celtics.jpg","nets.png","hornets.png","bulls.jpg","cavs.png","mavs.png","denver.jpg","pistons.gif","gs.jpeg","rockets.jpg","pacers.jpg","lakers.png","grizz.png","heat.jpeg","bucks.png","timber.jpg","pelicans.png","ny.png","okc.jpg","magic.gif","76.png","phx.jpeg","port.jpg","sac.png","sa.jpg","rap.jpg","jazz.jpg","dc.png"]
 var wins = 0;
 var losses = 0;
 var guessesLeft = 10;
