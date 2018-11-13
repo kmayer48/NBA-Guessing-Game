@@ -1,0 +1,73 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Word Guessing Game </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cutive" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+<body>
+    <header class="heading">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 text-center"> 
+                <h1 class=>NBA Guessing Game</h1> 
+                <img id="ball" src="assets/images/basketball.png">
+                <br>
+                <button type="button" id="new-game-button">Start <i class="fas fa-gamepad"></i></button>
+                </div>  
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+    <div class="pic-container jumbotron mt-4 p-1">
+        <div class="row">
+            <div class="col-sm-12 col-lg-12 text-center">
+            <img id="teamPic" src="assets/images/logo.jpg" class="img-fluid" alt="Team Logo">
+        </div>
+        </div>
+    </div>
+
+    <div class="main-container jumbotron mt-3 p-4">
+        <div class="row">
+            <div class="col-sm-12 col-lg-6 text-center">
+            <h2>Guess the City!</h2>
+            <br>
+            <span id="placeholders">___ ___ ___ ___ ___</span>
+            </div>
+            <div class="col-sm-12 col-lg-6 text-center">
+            <h2> Incorrect Guessed Letters</h2>
+            <br>
+            <span id="guessedLetters"></span>
+            </div>
+        </div>
+        </div>
+
+        <div class="main-container jumbotron mt-3 p-2">
+            <div class="row">
+            <div class="col-sm-12 col-lg-4 text-center">
+                <h2>Guesses Left:</h2> 
+                <span id="guesses-left"></span>
+            </div>
+            <div class="col-sm-12 col-lg-4 text-center">
+                <h2>Wins:</h2>
+                <span id="wins"></span>
+            </div>  
+            <div class="col-sm-12 col-lg-4 text-center">
+                <h2>Losses:</h2>
+                <span id="losses"></span>
+            </div>
+        </div>
+        </div>
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+body {
+    background-image: url("../images/background.jpg");
+    background-image: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.heading {
+    background-color: rgba(0,0,0,.55);
+    padding: 1%;
+}
+
+.pic-container {
+    background-color: rgba(255,255,255,.75);
+    width: 40%;
+    margin: 0 auto;
+}
+
+#ball {
+    height: 75px;
+    display: inline-block;
+    padding: 5px;
+    animation: bounce 0.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+    from {transfrom: translate3d(0, 0, 0);}
+    to {transform: translate3d(0 ,20px, 0);}
+}
+
+h1 {
+    font-size: 40pt;
+    color: white;
+    font-family: 'Cutive', serif;
+    display: inline-block;
+}
+
+button {
+    background: url("../images/button.jpg");
+    width: 150px;
+    height: 50px;
+    font-size: 24px;
+    color: white;
+    border: 3px white solid;
+}
+
+button:hover {
+    background: white;
+    color: orange;
+}
+
+.main-container {
+    background-color: rgba(255,255,255,.75);
+    width: 95%;
+    margin: 0 auto;
+}
+
+.container{
+    height: 100%;
+}
