@@ -11,10 +11,42 @@ body {
     padding: 1%;
 }
 
-.pic-container {
+.jumbotron {
     background-color: rgba(255,255,255,.75);
-    width: 40%;
     margin: 0 auto;
+}
+
+#teampic{
+   max-width: 50%;
+}
+
+.win h3{
+    font-family: 'Cutive', serif;
+}
+
+.lost h3{
+    font-family: 'Cutive', serif;
+}
+
+.flash {
+    animation-name: flash;
+     animation-duration: 0.4s;
+     animation-timing-function: linear;
+     animation-iteration-count: infinite;
+     animation-direction: alternate;
+     animation-play-state: running;
+ }
+
+ @keyframes flash {
+     from {color: orange;}
+     to {color: white;}
+ }
+
+.winpic{
+    text-align: center; 
+}
+.losepic{
+    text-align: center;
 }
 
 #ball {
@@ -60,4 +92,10 @@ button:hover {
 
 .container{
     height: 100%;
+}
+
+.space{
+    margin-left: 3px;
+    margin-right: 3px;
+    display: hidden;
 }

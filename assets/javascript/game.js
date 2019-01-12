@@ -17,8 +17,11 @@ var pickedTeamPlaceHolderArr = [];
 var guessedLetterBank = [];
 var incorrectLetterBank = [];
 
-
 //New Game Function 
+$(document).ready(function(){
+    $(".win").hide();
+    $(".lose").hide();
+})
 function gameStart() {
     //Reset game paramaters
     gameRunning = true;
@@ -26,12 +29,14 @@ function gameStart() {
     guessedLetterBank = [];
     incorrectLetterBank = [];
     pickedTeamPlaceHolderArr = [];
+    $(".win").hide();
+    $(".lose").hide();
 //Pick new word
     pickedTeam = cities[Math.floor(Math.random() * cities.length)];
     //create placeholders
     for( var i = 0; i < pickedTeam.length; i++) {
         if(pickedTeam[i] === " ") {
-            pickedTeamPlaceHolderArr.push(" ");
+            pickedTeamPlaceHolderArr.push(' ');
         }else{
             pickedTeamPlaceHolderArr.push('_');
         }
@@ -42,7 +47,7 @@ function gameStart() {
     $guessesLeft.textContent = guessesLeft;
     $wins.textContent = wins;
     $losses.textContent = losses;
-    $placeholders.textContent = pickedTeamPlaceHolderArr.join(' ');
+    $placeholders.innerHTML = pickedTeamPlaceHolderArr.join(" ");
     $guessedLetters.textContent = incorrectLetterBank;
     var pickedTeamIndex = cities.indexOf(pickedTeam)
     var pickedImageIndex = pickedTeamIndex;
@@ -50,7 +55,6 @@ function gameStart() {
     function imgSwap() {
         var oldImg = document.getElementById("teamPic");
         var newIMG = images[pickedImageIndex]
-    
         oldImg.src = "assets/images/" + newIMG;
     }
     imgSwap();
@@ -69,7 +73,7 @@ function letterGuess(letter) {
                 pickedTeamPlaceHolderArr[i] = pickedTeam[i];
             }
         }
-        $placeholders.textContent = pickedTeamPlaceHolderArr.join(' ');
+        $placeholders.innerHTML = pickedTeamPlaceHolderArr.join(' ');
         checkIncorrect(letter);
     }
     else {
@@ -99,6 +103,11 @@ function checkLoss() {
         gameRunning = false;
         $losses.textContent = losses;
         $placeholders.textContent = pickedTeam;
+        var removeCityIndex = cities.indexOf(pickedTeam);
+        var removePicIndex = removeCityIndex;
+        var removedCiy = cities.splice(removeCityIndex, 1);
+        var removedPic = images.splice(removeCityIndex, 1);
+        $(".lose").show();
     }
     checkWin();
 }
@@ -109,6 +118,11 @@ function checkWin() {
     {   wins++;
         gameRunning= false;
         $wins.textContent = wins;
+        var removeCityIndex = cities.indexOf(pickedTeam);
+        var removePicIndex = removeCityIndex;
+        var removedCiy = cities.splice(removeCityIndex, 1);
+        var removedPic = images.splice(removeCityIndex, 1);
+        $(".win").show();
     }
 }
 
@@ -119,9 +133,7 @@ document.onkeyup = function(event) {
     }
 }
 
-function playAudio(){
-    $audio.play();
-}
+
 
 //Event listener for new game
-$newGameButton.addEventListener("click", gameStart, playAudio);
+$newGameButton.addEventListener("click", gameStart);

@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
 <body>
+
+   <embed src="assets/audio/nba.mp3" autostart="true" loop="true" height="0" width="0">
+
     <header class="heading">
         <div class="container-fluid">
             <div class="row">
@@ -24,14 +27,23 @@
         </div>
     </header>
 
-    <div class="container">
-    <div class="pic-container jumbotron mt-4 p-1">
-        <div class="row">
-            <div class="col-sm-12 col-lg-12 text-center">
-            <img id="teamPic" src="assets/images/logo.jpg" class="img-fluid" alt="Team Logo">
+    <div class="row">
+        <div class="text-center col-3 d-inline-block my-auto mx-auto">
+        <div class="win">
+            <h3 class="flash">You win!</h3>
+            <iframe frameBorder="0" class="winpic embed-responsive-item" src="https://giphy.com/embed/O6wHkRygKHQru"></iframe>
         </div>
         </div>
-    </div>
+        <div class="jumbotron text-center col-6 d-inline-block mx-auto mt-3">
+            <div><img id="teamPic" src="assets/images/logo.jpg" class="img-fluid" alt="Team Logo"></div>
+        </div>
+        <div class="text-center col-3 d-inline-block my-auto mx-auto">
+        <div class="lose">
+            <h3 class="flash">You lose, try again!</h3>
+            <iframe frameBorder="0" class="losepic embed-responsive-item" src="https://giphy.com/embed/3o6EhT5bGCRILPRDlC"></iframe>
+        </div>
+        </div>
+        </div>
 
     <div class="main-container jumbotron mt-3 p-4">
         <div class="row">
@@ -64,6 +76,8 @@
             </div>
         </div>
         </div>
+
+        
         
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
